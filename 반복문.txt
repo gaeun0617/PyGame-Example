@@ -1,0 +1,32 @@
+while(조건문){
+	continue	
+}
+
+조건문이 false이면 종료
+continue
+반복문의 조건문이 true일 동안 계속 반복 시킴
+(=반복문의 조건문이 false일 때까지 반복)
+쓰임
+반복문 안에서 조건문(if문 switch문)을 사용해서
+반복 시킴 그 조건문의 값은 뛰어넘음
+ex) for(int i = 0; i < 10; i++){
+if(i ==2){
+continue;
+}
+System.out.print(i+" ");
+}
+
+Result >> 1 3 4 5 6 7 8 9
+
+break
+반복문의 조건문이 true여도 break문에 걸리면
+반복문 종료
+continue와 같이 조건문을 사용해서 쓰임
+ex) for(int i = 0; i < 10; i++){
+if(i ==2){
+break;
+}
+System.out.print(i+" ");
+}
+
+Result >> 1

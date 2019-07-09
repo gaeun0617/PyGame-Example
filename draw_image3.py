@@ -8,6 +8,7 @@ FPSCLOCK = pygame.time.Clock()
 
 def main():
     logo = pygame.image.load("C:/Users/가은/Desktop/Ga-Eun/Python/PyGame-Example/pythonlogo.jpg")
+    theta = 0
 
     while True:
         for event in pygame.event.get():
@@ -15,9 +16,12 @@ def main():
                 pygame.quit()
                 sys.exit()
         
-        SURFACE.fill((255,255,255))
+        theta += 1
 
-        SURFACE.blit(logo, (20,50))
+        SURFACE.fill((0,0,0))
+
+        new_logo = pygame.transform.rotate(logo, theta)
+        SURFACE.blit(new_logo,(50,30))
 
         pygame.display.update()
         FPSCLOCK.tick(30)

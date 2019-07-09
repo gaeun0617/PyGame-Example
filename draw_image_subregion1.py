@@ -1,9 +1,9 @@
 import sys
 import pygame
-from pygame.locals import QUIT
+from pygame.locals import QUIT, Rect
 
 pygame.init()
-SURFACE = pygame.display.set_mode((400,300))
+SURFACE = pygame.display.set_mode((400,200))
 FPSCLOCK = pygame.time.Clock()
 
 def main():
@@ -15,9 +15,9 @@ def main():
                 pygame.quit()
                 sys.exit()
         
-        SURFACE.fill((255,255,255))
-
-        SURFACE.blit(logo, (20,50))
+        SURFACE.fill((0,0,0))
+        SURFACE.blit(logo,(0,0))
+        SURFACE.blit(logo,(255,50), Rect(50,50,100,100))
 
         pygame.display.update()
         FPSCLOCK.tick(30)
